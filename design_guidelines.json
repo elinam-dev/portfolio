@@ -1,0 +1,159 @@
+{
+  "project_meta": {
+    "name": "Katey Elinam - Premium Portfolio",
+    "theme": "Dark Mode (Light toggle supported but secondary)",
+    "archetype": "Archetype 5 (Luxury) infused with Archetype 7 (Futuristic/Neon) for AI & Tech elements",
+    "vibe": "Cinematic, mysterious, elite, deeply personal, 8K-quality visual standard"
+  },
+  "typography": {
+    "headings": {
+      "family": "Clash Display, sans-serif",
+      "weights": ["400", "600"],
+      "tracking": "tracking-tight to tracking-tighter",
+      "usage_rules": "No Inter/Roboto/Open Sans. Maximum size text-6xl for Hero. Use fluid scaling (clamp). Never center by default."
+    },
+    "body": {
+      "family": "Satoshi, sans-serif",
+      "weights": ["400", "500"],
+      "tracking": "tracking-normal",
+      "usage_rules": "text-base for readability. leading-relaxed."
+    },
+    "accent_mono": {
+      "family": "JetBrains Mono, monospace",
+      "weights": ["400"],
+      "tracking": "tracking-[0.2em]",
+      "usage_rules": "Uppercase. Used for overlines, AI chat assistant text, code blocks, loading screen data."
+    }
+  },
+  "color_palette": {
+    "backgrounds": {
+      "base": "#030305",
+      "surface_1": "#0A0A0E",
+      "surface_2": "#121218",
+      "glass": "rgba(10, 10, 14, 0.6)"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#52525B"
+    },
+    "accents": {
+      "primary": "#00F0FF",
+      "primary_glow": "rgba(0, 240, 255, 0.5)",
+      "secondary": "#FF0055"
+    },
+    "rules": {
+      "contrast": "APCA standard compliant. Minimum 4.5:1 for body text against backgrounds.",
+      "gradients": "No generic linear gradients. Use radial glows for neon accents behind focal points.",
+      "textures": "Must use subtle CSS/SVG noise grain overlay (pointer-events-none, fixed, opacity-20) across the entire site."
+    }
+  },
+  "layout_spacing": {
+    "container": "Generous Spacing Philosophy. Use p-8, p-12, p-16, p-24.",
+    "grid_system": "MODE A: The 'Tetris' Grid for projects and about bento. Asymmetric, gaps of gap-8 to gap-12. No standard Bootstrap columns.",
+    "alignment": "Optical alignment over geometrical. Asymmetry preferred for visual tension.",
+    "sections": {
+      "hero": "100vh, full screen, centralized but dynamic composition",
+      "projects": "Bento or Masonry with wide gaps",
+      "footer": "py-32, massive typography for contact CTA (text-[10vw])"
+    }
+  },
+  "surface_strategies": {
+    "cards": {
+      "style": "The 'Tracing Beam' + Grid Borders. Expose the skeleton.",
+      "borders": "1px border border-white/10.",
+      "hover": "GSAP 3D tilt (transform-style: preserve-3d) + subtle neon radial glow."
+    },
+    "navigation": {
+      "style": "Glassmorphism (The 'Crystal' Variant). backdrop-blur-2xl bg-black/60. 1px inner border-white/10."
+    },
+    "ai_elements": {
+      "style": "Retro-Futurism. Terminal look with JetBrains Mono, neon cyan borders (border-cyan-500/50), and soft drop-shadow glows."
+    }
+  },
+  "animations_motion": {
+    "libraries_required": ["lenis", "gsap", "framer-motion", "three", "@react-three/fiber", "@react-three/drei"],
+    "interactions": {
+      "cursor": "Magnetic custom cursor with trailing particle field (Canvas or GSAP).",
+      "hero_intro": "Letter-by-letter scramble animation on name (GSAP TextPlugin or custom logic), typewriter effect on role.",
+      "scroll": "Parallax scrolling sections. Lenis smooth scroll. Scroll-triggered reveal animations (fade up + scale).",
+      "3d_cards": "Awwwards-style 3D tilt on project cards (rotateX/Y mapped to mouse movement).",
+      "timeline": "Vertical SVG line that draws itself via ScrollTrigger as user scrolls down the Experience section.",
+      "footer": "Ripple/wave WebGL or Canvas effect.",
+      "skills": "Interactive bubble/tag clusters by category. Framer motion physics or D3 force graph."
+    },
+    "accessibility": "Must respect prefers-reduced-motion."
+  },
+  "3d_creative_strategy": {
+    "hero_mesh": "React Three Fiber particle mesh representing 'AI & Code'. Interactive to mouse movement.",
+    "orbiting_skills": "Use Framer Motion to create circular orbiting paths for skill badges around the profile photo in the About section."
+  },
+  "media_assets": {
+    "profile_photo": {
+      "url": "https://customer-assets.emergentagent.com/job_premium-dev-hub-15/artifacts/ux3ll6rb_photo_2026-05-13_02-19-51.jpg",
+      "description": "Katey Elinam professional portrait. Apply cinematic masking, perhaps a monochrome filter via CSS to blend with the dark tech theme."
+    },
+    "hero_background": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/9d44a494-aa88-4803-85b4-5b295f4ca256/images/e922d97f9c42a08ca462fafebda2e77b2eb008d43018f47e18ef6ffcec6cfc7a.png",
+      "description": "8K ultra-premium cinematic abstract background with glowing cyan particles."
+    },
+    "project_stockhub": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/9d44a494-aa88-4803-85b4-5b295f4ca256/images/a59408545462943d4989ab14e0df977eee5a9f41d0ccdb72d9d4be703211c710.png",
+      "description": "AI-powered inventory system thumbnail. Dark mode 3D render."
+    },
+    "project_greendev": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/9d44a494-aa88-4803-85b4-5b295f4ca256/images/6f6ead93b1e9c9a3da79b00a612429d6ca5d8080d26c6ecfb5f0486b4a6ff65c.png",
+      "description": "GreenDev Associates thumbnail. Moody eco-tech aesthetic."
+    },
+    "project_flowitec": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/9d44a494-aa88-4803-85b4-5b295f4ca256/images/e7d5689d6db3182e0bc7f122510ed9fc5ace9c5ba39b4a0af63cec06598f3336.png",
+      "description": "Flowitec LMS thumbnail. Futuristic abstract visualization."
+    }
+  },
+  "content_data": {
+    "cv": {
+      "name": "Katey Elinam",
+      "role": "Full Stack Web Developer | Entrepreneur",
+      "location": "Accra, Ghana",
+      "email": "kateyelinam@gmail.com",
+      "socials": {
+        "github": "github.com/elinam-dev",
+        "linkedin": "linkedin.com/in/kateyelinam"
+      },
+      "experience": "3+ years freelance",
+      "tech_stack": ["React", "Next.js", "TypeScript", "Python", "Node.js"],
+      "ventures": ["Founder of Watch Hub retail"],
+      "projects": [
+        {"name": "Stock Hub", "description": "AI-powered inventory", "asset_key": "project_stockhub"},
+        {"name": "GreenDev Associates", "description": "Corporate website", "asset_key": "project_greendev"},
+        {"name": "Flowitec LMS", "description": "Learning Management System", "asset_key": "project_flowitec"},
+        {"name": "Flowitec Website", "description": "Agency website", "asset_key": "project_flowitec"}
+      ],
+      "education": "BSc Earth Science, University of Ghana",
+      "certifications": ["HubSpot Content/Social Media", "Google Analytics"]
+    }
+  },
+  "component_rules": {
+    "testing": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case, role-based. Example: data-testid='contact-submit-button'.",
+    "shadcn_ui": "Use sparingly. For forms (Input, Textarea), strip 'Vercel-look'. Overwrite rounded corners to sharp (rounded-none).",
+    "icons": "Use @phosphor-icons/react for high-end duotone or bold tech icons.",
+    "ai_chat": "Implement as a floating terminal-style widget, fixed to bottom right. Use Framer Motion for entrance/exit."
+  },
+  "instructions_to_main_agent": [
+    "1. Initialize the project with React, Tailwind CSS. Avoid Shadcn for main layouts to ensure custom bento grid asymmetry.",
+    "2. Install Lenis, GSAP, framer-motion, @phosphor-icons/react, three, @react-three/fiber, @react-three/drei.",
+    "3. Apply a global fixed CSS noise texture overlay to achieve the cinematic grain.",
+    "4. Cursor: Build custom magnetic cursor + trailing particle effect.",
+    "5. Hero Section: Implement R3F particle mesh bg. Name gets GSAP scramble animation; role gets typewriter. Include animated 'Available for work' floating status.",
+    "6. AI Features: 1) Floating Claude Sonnet 4.5 chat assistant (mock/API). 2) AI project summarizer on project hover/click. 3) AI Message Polish button on contact form.",
+    "7. Personalization: Read document.referrer to display personalized greeting in Hero or Chat.",
+    "8. Projects: Implement 3D tilt hover cards using 'preserve-3d'. Map mouse to rotation.",
+    "9. Experience: Build vertical animated timeline with drawing connector lines (GSAP DrawSVG or ScrollTrigger on SVG stroke-dashoffset).",
+    "10. Skills: Create interactive bubble/tag clusters. About section needs orbiting badges around the profile photo.",
+    "11. Contact Form: Integrate Resend email (or mock endpoint).",
+    "12. Footer: Implement webgl/css ripple wave effect.",
+    "13. Ensure dark/light toggle is present, but heavily optimize for the ultra-premium Dark Mode.",
+    "14. Use the EXACT image URLs provided in media_assets. No placeholders.",
+    "15. Add branded loading screen (Retro-Futurism terminal style or minimalist logo reveal) that waits for 3D/fonts to load."
+  ]
+}
