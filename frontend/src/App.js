@@ -7,12 +7,10 @@ import Nav from "@/components/Nav";
 import Hero3D from "@/components/Hero3D";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
-import AIFeatures from "@/components/AIFeatures";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import cv from "@/data/cv";
 
 function detectReferrer() {
@@ -44,7 +42,7 @@ function Portfolio() {
   useEffect(() => {
     document.title = "Katey Elinam — Full Stack Developer & Entrepreneur";
     const desc =
-      "Katey Elinam is a full-stack web developer in Accra, Ghana — building React, Next.js, and AI-powered applications for real clients.";
+      "Katey Elinam is a full-stack web developer in Accra, Ghana — building React, Next.js, and modern web applications for real clients.";
     let m = document.querySelector('meta[name="description"]');
     if (!m) {
       m = document.createElement("meta");
@@ -65,13 +63,11 @@ function Portfolio() {
         <Hero3D cv={cv} headline={referrer.headline} />
         <About cv={cv} />
         <Skills cv={cv} />
-        <AIFeatures />
         <Experience cv={cv} />
         <Projects cv={cv} />
         <Contact cv={cv} />
         <Footer cv={cv} />
       </main>
-      <ChatWidget referrer={referrer.source} />
     </div>
   );
 }

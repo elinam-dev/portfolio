@@ -80,7 +80,7 @@ export default function Footer({ cv }) {
             © {new Date().getFullYear()} Katey Elinam — All rights reserved.
           </div>
           <div className="font-mono" style={{ fontSize: 10, color: "var(--text-2)", textTransform: "uppercase", letterSpacing: "0.2em" }}>
-            Crafted in Accra · React · Vercel · Claude Sonnet 4.5
+            Crafted in Accra · React · Tailwind · Vercel
           </div>
         </div>
       </div>

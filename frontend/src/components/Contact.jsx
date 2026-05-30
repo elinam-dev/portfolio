@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Reveal } from "./Reveal";
-import { polishText } from "../lib/api";
 import {
   PaperPlaneTilt,
   CircleNotch,
@@ -8,7 +7,6 @@ import {
   LinkedinLogo,
   GithubLogo,
   EnvelopeSimple,
-  Sparkle,
 } from "@phosphor-icons/react";
 
 // Contact email — submissions are sent directly via FormSubmit (no backend).
@@ -18,25 +16,10 @@ const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/kateyelinam@gmail.com";
 export default function Contact({ cv }) {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [sending, setSending] = useState(false);
-  const [polishing, setPolishing] = useState(false);
   const [sent, setSent] = useState(false);
   const [err, setErr] = useState("");
 
   const upd = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
-
-  const onPolish = async () => {
-    if (!form.message.trim() || polishing) return;
-    setPolishing(true);
-    setErr("");
-    try {
-      const r = await polishText(form.message);
-      if (r && r.polished) setForm((f) => ({ ...f, message: r.polished }));
-    } catch {
-      setErr("AI polish failed. Try again.");
-    } finally {
-      setPolishing(false);
-    }
-  };
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -244,16 +227,6 @@ export default function Contact({ cv }) {
                   alignItems: "center",
                 }}
               >
-                <button
-                  type="button"
-                  className="btn"
-                  onClick={onPolish}
-                  disabled={polishing || !form.message.trim()}
-                  data-testid="ai-polish-btn"
-                >
-                  {polishing ? <CircleNotch size={14} className="spin" /> : <Sparkle size={14} weight="fill" />}
-                  {polishing ? "Polishing..." : "Let AI polish this"}
-                </button>
                 <button
                   type="submit"
                   className="btn btn-primary"
