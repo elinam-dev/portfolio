@@ -11,16 +11,20 @@ World-class AI-powered personal portfolio for Katey Elinam (Full Stack Web Dev |
 - Phosphor Icons, custom canvas particle mesh + scramble + typewriter (no Three.js/GSAP needed; vanilla canvas + React)
 
 ## Implemented (Dec 2025)
-- ✅ Hero: animated grain, custom magnetic cursor, particle mesh, scramble name, role typewriter, photo with cinematic mask, CTAs
-- ✅ About: orbiting skill badges around photo, animated counters (years/projects/tech)
-- ✅ Skills: tabbed categories from CV with hover-glow bubbles + marquee certifications
-- ✅ Experience: scroll-driven animated vertical timeline with drawing connector
-- ✅ Projects: 4 project cards with 3D mouse-tracked tilt, glow overlay, AI Summary button (Claude)
-- ✅ Contact: dark form, "Let AI polish this" (Claude), Resend email when key set, MongoDB fallback
-- ✅ Floating chat assistant: Claude Sonnet 4.5 with full CV context, multi-turn via session_id
-- ✅ Visitor personalization: document.referrer → headline variant
-- ✅ Loader, dark/light toggle, SEO meta + JSON-LD Person schema, OG tags
-- ✅ Backend tests: 10/10 pass (`/app/backend/tests/backend_test.py`)
+- ✅ Hero3D: Spline 3D interactive scene + Aceternity spotlight + premium gradient typography (KATEY in white→grey gradient, Elinam. in cyan italic with glow)
+- ✅ Hero CTAs: View My Work / Ask My AI (opens chat) / Download CV
+- ✅ AI Features showcase: 6 cards highlighting chat assistant, polish, summarizer, visitor intelligence, grounded responses, ship-ready stack
+- ✅ About: orbiting skill badges, animated counters
+- ✅ Skills: tabbed categories + marquee certifications
+- ✅ Experience: scroll-animated timeline
+- ✅ Projects: 9 cards total — 3 with REAL live screenshots (flowitec.com, greendevassociates.com, flowitecgoandgrow.com via thum.io), 6 mockup projects (Stock Hub, EstateView, PulsePOS, OrbitCRM, MediTrack, FleetOps) using Unsplash dashboard imagery
+- ✅ 3D tilt + glow on hover, AI Summary button per project
+- ✅ Contact: dark form, AI polish button, Resend integration ready
+- ✅ Floating chat assistant: Claude Sonnet 4.5 with full CV context, multi-turn
+- ✅ Visitor personalization via document.referrer
+- ✅ Removed Made-with-Emergent badge
+- ✅ Dark/light toggle, SEO meta + JSON-LD Person schema, OG tags
+- ✅ Backend tests: 10/10 pass
 
 ## API Surface (all /api prefix)
 - GET /api/health

@@ -2,12 +2,12 @@ import React, { useEffect, useMemo, useState } from "react";
 import "@/index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Loader from "@/components/Loader";
 import Cursor from "@/components/Cursor";
 import Nav from "@/components/Nav";
-import Hero from "@/components/Hero";
+import Hero3D from "@/components/Hero3D";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import AIFeatures from "@/components/AIFeatures";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
@@ -27,7 +27,6 @@ function detectReferrer() {
 }
 
 function Portfolio() {
-  const [loaded, setLoaded] = useState(false);
   const [cv, setCv] = useState(null);
   const [error, setError] = useState(null);
   const [theme, setTheme] = useState("dark");
@@ -64,15 +63,14 @@ function Portfolio() {
       <div className="grain" aria-hidden />
       <Cursor />
 
-      {!loaded && <Loader onDone={() => setLoaded(true)} />}
-
       <Nav theme={theme} onToggleTheme={toggleTheme} />
 
       {cv ? (
         <main>
-          <Hero cv={cv} headline={referrer.headline} />
+          <Hero3D cv={cv} headline={referrer.headline} />
           <About cv={cv} />
           <Skills cv={cv} />
+          <AIFeatures />
           <Experience cv={cv} />
           <Projects cv={cv} />
           <Contact cv={cv} />

@@ -80,7 +80,7 @@ export default function Footer({ cv }) {
             © {new Date().getFullYear()} Katey Elinam — All rights reserved.
           </div>
           <div className="font-mono" style={{ fontSize: 10, color: "var(--text-2)", textTransform: "uppercase", letterSpacing: "0.2em" }}>
-            Built with ⌁ React · FastAPI · Claude
+            Crafted in Accra · React · FastAPI · Claude Sonnet 4.5
           </div>
         </div>
       </div>

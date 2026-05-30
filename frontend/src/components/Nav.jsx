@@ -4,6 +4,7 @@ import { Sun, Moon, List, X } from "@phosphor-icons/react";
 const links = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
+  { id: "ai", label: "AI" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Work" },
   { id: "contact", label: "Contact" },
