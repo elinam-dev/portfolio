@@ -7,10 +7,12 @@ import Nav from "@/components/Nav";
 import Hero3D from "@/components/Hero3D";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import AIFeatures from "@/components/AIFeatures";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 import cv from "@/data/cv";
 
 function detectReferrer() {
@@ -63,11 +65,13 @@ function Portfolio() {
         <Hero3D cv={cv} headline={referrer.headline} />
         <About cv={cv} />
         <Skills cv={cv} />
+        <AIFeatures />
         <Experience cv={cv} />
         <Projects cv={cv} />
         <Contact cv={cv} />
         <Footer cv={cv} />
       </main>
+      <ChatWidget referrer={referrer.source} />
     </div>
   );
 }

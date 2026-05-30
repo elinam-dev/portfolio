@@ -1,9 +1,12 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Reveal } from "./Reveal";
-import { ArrowUpRight, GithubLogo } from "@phosphor-icons/react";
+import { ArrowUpRight, GithubLogo, Sparkle, CircleNotch } from "@phosphor-icons/react";
+import { summarizeProject } from "../lib/api";
 
 function ProjectCard({ p, idx }) {
   const cardRef = useRef(null);
+  const [summary, setSummary] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const onMove = (e) => {
     const el = cardRef.current;
@@ -21,6 +24,19 @@ function ProjectCard({ p, idx }) {
     const el = cardRef.current;
     if (!el) return;
     el.style.transform = `perspective(1000px) rotateX(0) rotateY(0)`;
+  };
+
+  const runSummary = async () => {
+    if (summary || loading) return;
+    setLoading(true);
+    try {
+      const r = await summarizeProject({ name: p.name, description: p.description, tech_stack: p.stack });
+      setSummary(r.summary);
+    } catch {
+      setSummary("AI summary unavailable right now. Try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -73,6 +89,22 @@ function ProjectCard({ p, idx }) {
             {p.description}
           </p>
 
+          {summary && (
+            <div
+              style={{
+                padding: 16, border: "1px solid var(--neon)",
+                background: "rgba(0,240,255,0.05)",
+                fontFamily: "JetBrains Mono", fontSize: 12, lineHeight: 1.65, color: "var(--text-0)",
+              }}
+              data-testid={`project-ai-summary-${idx}`}
+            >
+              <div style={{ color: "var(--neon)", fontSize: 10, marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.2em" }}>
+                ⌁ AI Summary
+              </div>
+              {summary}
+            </div>
+          )}
+
           <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: "auto" }}>
             {p.stack.map((s) => (
               <span key={s} className="font-mono" style={{
@@ -83,6 +115,16 @@ function ProjectCard({ p, idx }) {
           </div>
 
           <div style={{ display: "flex", gap: 8, marginTop: 8, alignItems: "center", flexWrap: "wrap" }}>
+            <button
+              className="btn"
+              onClick={runSummary}
+              disabled={loading}
+              data-testid={`project-summarize-btn-${idx}`}
+              style={{ padding: "12px 18px", fontSize: 10 }}
+            >
+              {loading ? <CircleNotch size={12} className="spin" /> : <Sparkle size={12} weight="fill" />}
+              {loading ? "Thinking..." : summary ? "AI Summary ✓" : "AI Summary"}
+            </button>
             {p.github && (
               <a
                 href={p.github}
@@ -139,6 +181,10 @@ export default function Projects({ cv }) {
           ))}
         </div>
       </div>
+      <style>{`
+        .spin { animation: spin 0.9s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+      `}</style>
     </section>
   );
 }

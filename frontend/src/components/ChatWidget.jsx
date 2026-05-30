@@ -11,9 +11,8 @@ const SUGGESTIONS = [
 
 export default function ChatWidget({ referrer }) {
   const [open, setOpen] = useState(false);
-  const [sessionId, setSessionId] = useState(null);
   const [messages, setMessages] = useState([
-    { role: "assistant", text: "Hey 👋 I'm Katey's AI assistant. Ask me anything about his work, skills, or projects." },
+    { role: "assistant", content: "Hey 👋 I'm Katey's AI assistant. Ask me anything about his work, skills, or projects." },
   ]);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
@@ -27,14 +26,21 @@ export default function ChatWidget({ referrer }) {
     const q = (text ?? input).trim();
     if (!q || busy) return;
     setInput("");
-    setMessages((m) => [...m, { role: "user", text: q }]);
+    const nextHistory = [...messages, { role: "user", content: q }];
+    setMessages(nextHistory);
     setBusy(true);
     try {
-      const r = await postChat({ session_id: sessionId, message: q, referrer });
-      setSessionId(r.session_id);
-      setMessages((m) => [...m, { role: "assistant", text: r.reply }]);
+      const r = await postChat({
+        message: q,
+        history: messages.filter((m) => m.role === "user" || m.role === "assistant"),
+        referrer,
+      });
+      setMessages((m) => [...m, { role: "assistant", content: r.reply }]);
     } catch (e) {
-      setMessages((m) => [...m, { role: "assistant", text: "Hmm, I couldn't reach the brain. Please try again." }]);
+      setMessages((m) => [
+        ...m,
+        { role: "assistant", content: "Hmm, I couldn't reach the brain right now. Please try again in a moment." },
+      ]);
     } finally {
       setBusy(false);
     }
@@ -71,7 +77,7 @@ export default function ChatWidget({ referrer }) {
           >
             {messages.map((m, i) => (
               <div key={i} className={m.role === "user" ? "chat-msg-user" : "chat-msg-bot"} data-testid={`chat-msg-${m.role}-${i}`}>
-                {m.text}
+                {m.content}
               </div>
             ))}
             {busy && (
@@ -79,7 +85,7 @@ export default function ChatWidget({ referrer }) {
                 <CircleNotch size={14} className="spin" /> thinking...
               </div>
             )}
-            {messages.length <= 1 && (
+            {messages.length <= 1 && !busy && (
               <div style={{ marginTop: 8, display: "flex", flexDirection: "column", gap: 6 }}>
                 {SUGGESTIONS.map((s) => (
                   <button
