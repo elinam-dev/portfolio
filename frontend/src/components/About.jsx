@@ -91,7 +91,7 @@ export default function About({ cv }) {
           className="counter-row"
         >
           {[
-            { n: 3, suffix: "+", label: "Years of experience" },
+            { n: 4, suffix: "+", label: "Years of experience" },
             { n: 4, suffix: "+", label: "Live projects shipped" },
             { n: 25, suffix: "+", label: "Technologies mastered" },
           ].map((c) => (

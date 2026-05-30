@@ -45,11 +45,11 @@ export default function Nav({ theme, onToggleTheme }) {
         <button
           onClick={() => go("hero")}
           data-testid="nav-logo"
-          style={{ background: "transparent", border: "none", color: "var(--text-0)" }}
-          className="font-mono"
+          style={{ background: "transparent", border: "none", color: "var(--text-0)", display: "inline-flex", alignItems: "baseline", gap: 6 }}
         >
-          <span style={{ color: "var(--neon)" }}>K.</span>ELINAM
-          <span style={{ color: "var(--text-2)", marginLeft: 8 }}>// dev</span>
+          <span className="font-display" style={{ fontSize: 20, fontWeight: 500, letterSpacing: "-0.01em" }}>
+            Katey <em style={{ color: "var(--neon)", fontStyle: "italic" }}>Elinam</em>
+          </span>
         </button>
 
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>

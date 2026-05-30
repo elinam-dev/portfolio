@@ -179,10 +179,10 @@ export default function Hero3D({ cv, headline }) {
               }}
             >
               {[
-                { v: "3+", l: "Years" },
-                { v: "10+", l: "Projects" },
-                { v: "25+", l: "Tools" },
-              ].map((s) => (
+            { v: "4+", l: "Years" },
+            { v: "10+", l: "Projects" },
+            { v: "25+", l: "Tools" },
+          ].map((s) => (
                 <div key={s.l}>
                   <div
                     className="font-display"
@@ -207,17 +207,12 @@ export default function Hero3D({ cv, headline }) {
             </div>
           </div>
 
-          {/* Right: 3D Spline scene */}
+          {/* Right: 3D Spline scene (borderless, full-bleed) */}
           <div
             style={{
               position: "relative",
               height: "min(72vh, 640px)",
               minHeight: 420,
-              borderRadius: 16,
-              overflow: "hidden",
-              border: "1px solid var(--line-strong)",
-              background:
-                "radial-gradient(50% 40% at 50% 100%, rgba(0,240,255,0.12), transparent), #050507",
             }}
             data-testid="hero-spline"
           >
@@ -225,39 +220,6 @@ export default function Hero3D({ cv, headline }) {
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"
             />
-
-            {/* corner labels */}
-            <div
-              className="font-mono"
-              style={{
-                position: "absolute",
-                top: 14,
-                left: 14,
-                fontSize: 10,
-                color: "var(--neon)",
-                background: "rgba(0,0,0,0.55)",
-                padding: "6px 10px",
-                border: "1px solid var(--neon)",
-                letterSpacing: "0.2em",
-                textTransform: "uppercase",
-              }}
-            >
-              ● LIVE · interactive 3D
-            </div>
-            <div
-              className="font-mono"
-              style={{
-                position: "absolute",
-                bottom: 14,
-                right: 14,
-                fontSize: 10,
-                color: "var(--text-2)",
-                textTransform: "uppercase",
-                letterSpacing: "0.2em",
-              }}
-            >
-              drag · explore
-            </div>
           </div>
         </div>
 
