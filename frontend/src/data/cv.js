@@ -1,0 +1,170 @@
+// Static CV data. Frontend-only — no backend required.
+const cv = {
+  name: "Katey Elinam",
+  title: "Full Stack Web Developer | Entrepreneur",
+  location: "Accra, Ghana",
+  email: "kateyelinam@gmail.com",
+  phone: "+233 50 366 7746",
+  linkedin: "https://linkedin.com/in/kateyelinam",
+  github: "https://github.com/elinam-dev",
+  available: true,
+  years_experience: 4,
+  projects_count: 9,
+  tech_count: 25,
+  bio: "Self-taught full stack web developer with 4+ years of freelance experience building responsive websites and custom web applications for real clients. Proficient in React, Next.js, TypeScript, Python, and Node.js. Founder of Watch Hub, demonstrating strong entrepreneurial, sales, and operational skills.",
+  roles: [
+    "Full Stack Web Developer",
+    "Entrepreneur",
+    "Founder & CEO",
+    "Freelance Web Developer",
+    "React / Next.js Specialist",
+  ],
+  skills: {
+    Languages: ["JavaScript", "TypeScript", "Python", "Java", "C/C++", "SQL", "HTML5", "CSS3"],
+    Frontend: ["React", "Next.js", "Angular", "React Native", "Tailwind CSS", "UI/UX"],
+    Backend: ["Node.js", "REST APIs", "FastAPI", "Database Integration"],
+    DevOps: ["Docker", "Docker Compose", "GitHub Actions", "Vercel", "Railway"],
+    Tools: ["Git", "GitHub", "VS Code", "Google Analytics", "HubSpot"],
+  },
+  experience: [
+    {
+      company: "Watch Hub",
+      role: "Founder & CEO",
+      start: "2025",
+      end: "Present",
+      location: "Tema, Ghana",
+      bullets: [
+        "Founded and operate a retail watch business: sourcing, pricing, sales, CRM.",
+        "Closed clients through direct outreach and relationship-driven sales.",
+        "Implemented digital marketing strategies driving brand growth.",
+        "Oversee inventory, financial records, and supplier coordination.",
+      ],
+    },
+    {
+      company: "Self-Employed",
+      role: "Freelance Web Developer",
+      start: "2022",
+      end: "Present",
+      location: "Remote",
+      bullets: [
+        "Delivered 4+ production sites using React, Next.js, and TypeScript.",
+        "Built an AI-powered inventory system, corporate sites, and a full LMS.",
+        "Owned the full lifecycle: scoping → design → dev → deploy → support.",
+        "Integrated REST APIs and AI-powered automation in production.",
+        "Containerized with Docker & shipped via GitHub Actions to Vercel/Railway.",
+      ],
+    },
+  ],
+  projects: [
+    {
+      name: "Flowitec — LMS",
+      tagline: "Learning Management System",
+      description:
+        "End-to-end LMS featuring course management, role-based authentication, and a clean learning UX. Live and in active client use, deployed to Vercel.",
+      stack: ["Next.js", "Auth", "Vercel", "Tailwind"],
+      image: "https://image.thum.io/get/width/1280/crop/800/noanimate/https://flowitec.com",
+      date: "2026",
+      live: "https://flowitec.com",
+      github: "https://github.com/elinam-dev",
+    },
+    {
+      name: "GreenDev Associates",
+      tagline: "Corporate Website",
+      description:
+        "Responsive, brand-led corporate website with custom content management. Cross-device performance and a fast, accessible UI.",
+      stack: ["React", "Tailwind", "CMS", "Responsive"],
+      image: "https://image.thum.io/get/width/1280/crop/800/noanimate/https://greendevassociates.com",
+      date: "2026",
+      live: "https://greendevassociates.com",
+      github: "https://github.com/elinam-dev",
+    },
+    {
+      name: "Flowitec — Go & Grow",
+      tagline: "Product Launch Site",
+      description:
+        "Marketing site for Flowitec's flagship Go & Grow product with crisp animations, conversion-tuned copy, and mobile-first design.",
+      stack: ["Next.js", "Tailwind", "Framer Motion", "Vercel"],
+      image: "https://image.thum.io/get/width/1280/crop/800/noanimate/https://flowitecgoandgrow.com",
+      date: "2026",
+      live: "https://flowitecgoandgrow.com",
+      github: "https://github.com/elinam-dev",
+    },
+    {
+      name: "Stock Hub",
+      tagline: "AI-Powered Inventory Management",
+      description:
+        "Full-stack inventory + sales platform with AI-driven restock recommendations, real-time dashboards, and CI/CD pipelines on Railway.",
+      stack: ["React", "Next.js", "AI", "Docker", "Railway"],
+      image: "https://image.thum.io/get/width/1280/crop/800/noanimate/https://www.zoho.com/inventory/",
+      date: "2026 — Present",
+      live: null,
+      github: "https://github.com/elinam-dev",
+    },
+    {
+      name: "EstateView",
+      tagline: "Real Estate Listings Platform",
+      description:
+        "Property listings marketplace with map-based search, agent dashboards, AI-generated property descriptions, and Stripe-powered featured listings.",
+      stack: ["Next.js", "PostgreSQL", "Mapbox", "Stripe", "AI"],
+      image: "https://image.thum.io/get/width/1280/crop/800/noanimate/https://www.zillow.com",
+      date: "2025",
+      live: null,
+      github: "https://github.com/elinam-dev",
+    },
+    {
+      name: "PulsePOS",
+      tagline: "Point-of-Sale System",
+      description:
+        "Tablet-first POS for retail with inventory sync, multi-cashier sessions, daily Z-reports, and offline-first transaction queueing.",
+      stack: ["React", "Node.js", "SQLite", "PWA", "Tailwind"],
+      image: "https://image.thum.io/get/width/1280/crop/800/noanimate/https://squareup.com/us/en/point-of-sale",
+      date: "2025",
+      live: null,
+      github: "https://github.com/elinam-dev",
+    },
+    {
+      name: "OrbitCRM",
+      tagline: "Sales & Pipeline CRM",
+      description:
+        "Lightweight CRM with Kanban pipelines, deal forecasting, email sync, and an AI assistant that drafts follow-ups based on conversation context.",
+      stack: ["Next.js", "FastAPI", "Postgres", "Claude AI"],
+      image: "https://image.thum.io/get/width/1280/crop/800/noanimate/https://www.hubspot.com/products/crm",
+      date: "2025",
+      live: null,
+      github: "https://github.com/elinam-dev",
+    },
+    {
+      name: "MediTrack",
+      tagline: "Clinic Inventory & Patient Records",
+      description:
+        "HIPAA-mindful clinic platform tracking stock of medications, patient records, prescriptions, and automated low-stock alerts.",
+      stack: ["React", "Node.js", "MongoDB", "Express"],
+      image: "https://image.thum.io/get/width/1280/crop/800/noanimate/https://www.practo.com/software",
+      date: "2024",
+      live: null,
+      github: "https://github.com/elinam-dev",
+    },
+    {
+      name: "FleetOps",
+      tagline: "Logistics & Delivery Tracking",
+      description:
+        "Real-time fleet tracking dashboard with driver routes, fuel tracking, delivery proofs, and a mobile app for couriers built in React Native.",
+      stack: ["React Native", "Next.js", "Mapbox", "WebSockets"],
+      image: "https://image.thum.io/get/width/1280/crop/800/noanimate/https://www.samsara.com",
+      date: "2024",
+      live: null,
+      github: "https://github.com/elinam-dev",
+    },
+  ],
+  education: [
+    { school: "University of Ghana", degree: "BSc Earth Science", dates: "01/2025 – Present" },
+    { school: "Adisadel College", degree: "Senior High — General Science", dates: "2022 – 2024" },
+  ],
+  certifications: [
+    "HubSpot Content Marketing Certification",
+    "HubSpot Social Media Certification",
+    "Google Analytics Certification",
+  ],
+};
+
+export default cv;

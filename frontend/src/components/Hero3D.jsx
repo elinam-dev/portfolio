@@ -147,13 +147,12 @@ export default function Hero3D({ cv, headline }) {
               </button>
               <button
                 className="btn"
-                data-testid="cta-ai-chat"
-                onClick={() => {
-                  const btn = document.querySelector('[data-testid="chat-fab"]');
-                  if (btn) btn.click();
-                }}
+                data-testid="cta-contact"
+                onClick={() =>
+                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+                }
               >
-                <Lightning size={14} weight="fill" /> Ask My AI
+                <Lightning size={14} weight="fill" /> Get In Touch
               </button>
               <a
                 className="btn"
