@@ -2,9 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "overrides": {
-    "ajv": "^8.17.1"
-  },
+
   "dependencies": {
     "@hookform/resolvers": "5.0.1",
     "@phosphor-icons/react": "^2.1.7",
